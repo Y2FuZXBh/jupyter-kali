@@ -1,3 +1,4 @@
 # POC | Jupyter Notebook for Manual Penetration Testing
-### For for organization on OSCP/HTB Challenges
+### Made for process organization on OSCP/HTB challenges
+
 ##### Working On This Image..
