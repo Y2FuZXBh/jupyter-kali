@@ -1,12 +1,2 @@
-scapy
-requests
-impacket
-pwntools
-cryptography
 python-nmap
-Faker
-Twisted
-paramiko
-rawsocketpy
-sockets
-beautifulsoup4
+jupyterlab

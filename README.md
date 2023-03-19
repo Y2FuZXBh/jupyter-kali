@@ -1,5 +1,6 @@
-# POC | Jupyter Notebook for Manual Penetration Testing
-### Made for process organization on OSCP/HTB challenges
+# POC: Jupyter Notebook + Kali 
+## Made for "Manual Penetration Testing" to help track/organize data on CTF challenges
 
-##### Working On This Image..
-###### https://hub.docker.com/u/y2fuzxbh
+### Base Image: https://hub.docker.com/r/kalilinux/kali-rolling
+
+##### working on image and basic template..
