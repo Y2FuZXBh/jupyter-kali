@@ -1,34 +1,35 @@
 FROM kalilinux/kali-rolling:latest
 
 ENV DEBIAN_FRONTEND noninteractive
+ENV JUPYTER_ENABLE_LAB yes
 
-EXPOSE 8888
 WORKDIR /root
 RUN mkdir .logs
 
-RUN apt update -qq && apt dist-upgrade -qq
-
-RUN apt update -qq && apt install -qq -y --no-install-recommends \
-    wget \
-    curl \
-    man \
-    sudo \
+# apps
+RUN apt update -qq && apt install -qq -y \
+    nmap \
     git
 
-RUN apt update -qq && apt install -qq -y --no-install-recommends \
-    nmap
-
-RUN apt update -qq && apt install -qq -y --no-install-recommends \
+# python
+RUN apt update -qq && apt install -qq -y \
+    python-is-python3 \
     python3-pip \
     python-is-python3 \
-    python3-impacket
+    python3-impacket \
+    python3-unicorn \
+    net-tools
 
-RUN apt autoremove -qq && apt clean -qq
+# jupyter
+EXPOSE 8888
 
-COPY . .
+RUN pip install \
+    python3-nmap \
+    jupyterlab
 
-RUN pip install -r requirements.txt && rm requirements.txt
+ADD https://github.com/krallin/tini/releases/download/v0.19.0/tini /usr/bin/tini
+RUN chmod +x /usr/bin/tini
 
-SHELL ["/bin/bash"]
-
-ENTRYPOINT ["jupyter-lab", "--allow-root"]
+ENTRYPOINT ["/usr/bin/tini", "--"]
+SHELL ["bash"]
+CMD ["jupyter-lab", "--allow-root", "--port=8888", "--no-browser", "--ip=0.0.0.0"]

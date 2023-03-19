@@ -6,16 +6,20 @@ _docker.images.build(
     path=".",
     tag="jupyter-kali:latest",
     pull=True,
-    rm=True,
-    nocache=True
+    rm=True
 )
 
+PORT = 80
 _docker.containers.run(
     name="jupyter-kali",
     image="jupyter-kali:latest",
-    network_mode="host",
-    #ports={'8888/tcp': 9000},
+    ports={'8888/tcp': PORT},
     detach=True
 )
 
-#_docker.containers.get("jupyter-kali").attrs['NetworkSettings']['IPAddress']
+print(
+    "jupyter: http://{0}:{1}/lab?token=".format(
+        _docker.containers.get("jupyter-kali").attrs['NetworkSettings']['IPAddress'],
+        PORT
+    )
+)
