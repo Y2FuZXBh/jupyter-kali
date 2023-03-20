@@ -28,7 +28,10 @@ RUN pip install \
     jupyterlab
 
 ADD https://github.com/krallin/tini/releases/download/v0.19.0/tini /usr/bin/tini
-RUN chmod +x /usr/bin/tini
+RUN chmod +x /usr/bin/tini && mkdir ~/data
+
+WORKDIR /root/data
+COPY sample/reconnaissance.ipynb .
 
 ENTRYPOINT ["/usr/bin/tini", "--"]
 SHELL ["bash"]
