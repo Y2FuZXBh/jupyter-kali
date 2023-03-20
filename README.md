@@ -9,5 +9,5 @@
 - dnsrecon
 
 ###### Example
-![zsh](https://raw.githubusercontent.com/Y2FuZXBh/jupyter-kali/main/samples/zsh.ipynb "zsh")
+![zsh](https://github.com/Y2FuZXBh/jupyter-kali/blob/main/samples/zsh.ipynb "zsh")
 ![py](samples/python.ipynb "py")
