@@ -9,5 +9,5 @@
 - dnsrecon
 
 ###### Example
-![zsh](samples\zsh.ipynb "zsh")
-![py](samples\python.ipynb "py")
+![zsh](samples/zsh.ipynb "zsh")
+![py](samples/python.ipynb "py")
