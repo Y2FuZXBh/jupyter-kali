@@ -46,9 +46,9 @@ RUN apt update -qq && \
 # tini
 ADD https://github.com/krallin/tini/releases/download/v0.19.0/tini /usr/bin/tini
 RUN chmod +x /usr/bin/tini && mkdir ~/data
-HEALTHCHECK CMD curl --fail http://localhost:8888/api || exit 1
 
-# import samples and run
+# run
 WORKDIR /home/jupyter
 ENTRYPOINT ["/usr/bin/tini", "--"]
+HEALTHCHECK CMD wget -q --spider http://127.0.0.1:8888 > /dev/null || exit 1
 CMD ["jupyter-lab", "--allow-root", "--port=8888", "--no-browser", "--ip=0.0.0.0"]
