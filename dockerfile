@@ -8,6 +8,7 @@ WORKDIR /root
 RUN apt update -qq && apt install -qq -y \
     nmap \
     git \
+    curl \
     wget \
     python-is-python3 \
     python3-pip && \
@@ -48,6 +49,5 @@ RUN chmod +x /usr/bin/tini && mkdir ~/data
 
 # import samples and run
 WORKDIR /home/jupyter
-COPY samples/. samples/.
 ENTRYPOINT ["/usr/bin/tini", "--"]
 CMD ["jupyter-lab", "--allow-root", "--port=8888", "--no-browser", "--ip=0.0.0.0"]
