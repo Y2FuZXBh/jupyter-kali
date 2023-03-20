@@ -17,7 +17,8 @@ RUN apt update -qq && apt install -qq -y \
 # oscp
 RUN apt update -qq && apt install -qq -y \
     dnsrecon \
-    smtp-user-enum
+    smtp-user-enum \
+    exploitdb
 
 # enum4linux-ng
 RUN apt update -qq && apt install -qq -y \
