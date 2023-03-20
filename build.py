@@ -16,10 +16,3 @@ _docker.containers.run(
     ports={'8888/tcp': PORT},
     detach=True
 )
-
-print(
-    "jupyter: http://{0}:{1}/lab?token=".format(
-        _docker.containers.get("jupyter-kali").attrs['NetworkSettings']['IPAddress'],
-        PORT
-    )
-)
