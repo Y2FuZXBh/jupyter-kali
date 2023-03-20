@@ -7,7 +7,3 @@
 - enum4linux-ng
 - RustScan
 - dnsrecon
-
-###### Example
-![zsh](https://github.com/Y2FuZXBh/jupyter-kali/blob/main/samples/zsh.ipynb "zsh")
-![py](samples/python.ipynb "py")
