@@ -46,6 +46,7 @@ RUN apt update -qq && \
 # tini
 ADD https://github.com/krallin/tini/releases/download/v0.19.0/tini /usr/bin/tini
 RUN chmod +x /usr/bin/tini && mkdir ~/data
+HEALTHCHECK CMD curl --fail http://localhost:8888/api || exit 1
 
 # import samples and run
 WORKDIR /home/jupyter
