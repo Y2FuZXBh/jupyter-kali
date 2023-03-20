@@ -1,5 +1,7 @@
 import docker
 
+PORT = 8888
+
 _docker = docker.from_env()
 
 _docker.images.build(
@@ -9,7 +11,6 @@ _docker.images.build(
     rm=True
 )
 
-PORT = 80
 _docker.containers.run(
     name="jupyter-kali",
     image="jupyter-kali:latest",

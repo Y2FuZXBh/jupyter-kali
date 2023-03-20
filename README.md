@@ -1,6 +1,13 @@
-# POC: Jupyter Notebook + Kali 
-### Made for "Manual Penetration Testing" to help track/organize data on CTF challenges
+# POC: Jupyter Notebook + Kali Tools
+### Made for manual penetration testing and objectives like OSCP or HTB challenges.
+##### This is `not` a `secure` `container` use at your own risk!
 
-##### Base Image: https://hub.docker.com/r/kalilinux/kali-rolling
+###### Tools
+- nmap
+- enum4linux-ng
+- RustScan
+- dnsrecon
 
-##### working on image and basic template..
+###### Example
+![zsh](samples\zsh.ipynb "zsh")
+![py](samples\python.ipynb "py")
