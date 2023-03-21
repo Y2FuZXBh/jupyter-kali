@@ -27,7 +27,6 @@ RUN apt update -qq && apt install -qq -y \
     exploitdb \
     nikto \
     gobuster \
-    hydra \
     netkit-tftp \
     cewl \
     inetutils \
