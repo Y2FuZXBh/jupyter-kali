@@ -12,12 +12,10 @@ RUN apt update -qq && apt install -qq -y \
     wget \
     hostsman \
     ffuf \
-    netcat-traditional \
+    netcat-traditional
 
-
-
-    # python
-    RUN apt update -qq && apt install -qq -y \
+# python
+RUN apt update -qq && apt install -qq -y \
     python-is-python3 \
     python3-pip && \
     pip install \
@@ -47,8 +45,10 @@ RUN apt update -qq && apt install -qq -y \
     irssi \
     ldapsearch \
     evil-winrm \
-    crackmapexec
-
+    crackmapexec \
+    smtp-user-enum \
+    wpscan \
+    smbmap 
 
 # enum4linux-ng
 RUN apt update -qq && apt install -qq -y \
