@@ -16,12 +16,12 @@ RUN apt update -qq && apt install -qq -y \
 
 
 
-# python
-RUN apt update -qq && apt install -qq -y \
+    # python
+    RUN apt update -qq && apt install -qq -y \
     python-is-python3 \
     python3-pip && \
     pip install \
-        python3-nmap
+    python3-nmap
 
 # oscp
 RUN apt update -qq && apt install -qq -y \
