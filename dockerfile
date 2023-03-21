@@ -28,22 +28,14 @@ RUN apt update -qq && apt install -qq -y \
     nikto \
     gobuster \
     hydra \
-    tftp \
+    netkit-tftp \
     cewl \
-    telnet \
-    rpcinfo \
-    rpcclient \
-    smbclient \
-    nmblookup \
+    inetutils \
+    samba \
     nbtscan \
     smbmap \
-    smbget \
     onesixtyone \
-    snmpwalk \
-    snmpenum \
-    snmp-check \
     irssi \
-    ldapsearch \
     evil-winrm \
     crackmapexec \
     smtp-user-enum \
