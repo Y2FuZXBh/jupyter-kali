@@ -23,22 +23,9 @@ RUN apt update -qq && apt install -qq -y \
 
 # oscp
 RUN apt update -qq && apt install -qq -y \
-    dnsrecon \
-    exploitdb \
-    nikto \
-    gobuster \
-    inetutils \
-    samba \
-    nbtscan \
-    smbmap \
-    onesixtyone \
-    irssi \
-    evil-winrm \
-    crackmapexec \
-    smtp-user-enum \
-    wpscan \
-    smbmap \
-    hydra
+    kali-tools-windows-resources \
+    kali-tools-fuzzing \
+    kali-linux-labs
 
 # enum4linux-ng
 RUN apt update -qq && apt install -qq -y \
