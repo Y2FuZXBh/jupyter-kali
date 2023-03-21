@@ -4,7 +4,7 @@ import time
 
 PORT = 8888
 
-print("\n\nJupyter-Kali | Y2FuZXBh\n")
+print("\nJupyter-Kali | Y2FuZXBh\n")
 
 _docker = docker.from_env()
 print("  [+] Building Image..")

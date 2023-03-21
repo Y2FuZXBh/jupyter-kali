@@ -11,8 +11,7 @@ RUN apt update -qq && apt install -qq -y \
     curl \
     wget \
     hostsman \
-    ffuf \
-    seclists
+    ffuf 
 
 # python
 RUN apt update -qq && apt install -qq -y \
