@@ -8,6 +8,8 @@
 - RustScan
 - dnsrecon
 - searchsploit
+- ffuf
+
 
 ## Example
 ![example](https://user-images.githubusercontent.com/88941079/226449705-6d7f5186-e0e4-4ff9-818c-ff02ce74b45c.png)

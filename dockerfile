@@ -4,12 +4,18 @@ ENV DEBIAN_FRONTEND noninteractive
 
 WORKDIR /root
 
-# python
+# apps
 RUN apt update -qq && apt install -qq -y \
     nmap \
     git \
     curl \
     wget \
+    hostsman \
+    ffuf \
+    seclists
+
+# python
+RUN apt update -qq && apt install -qq -y \
     python-is-python3 \
     python3-pip && \
     pip install \
@@ -18,7 +24,6 @@ RUN apt update -qq && apt install -qq -y \
 # oscp
 RUN apt update -qq && apt install -qq -y \
     dnsrecon \
-    smtp-user-enum \
     exploitdb
 
 # enum4linux-ng
