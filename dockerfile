@@ -11,7 +11,10 @@ RUN apt update -qq && apt install -qq -y \
     curl \
     wget \
     hostsman \
-    ffuf 
+    ffuf \
+    netcat-traditional \
+
+
 
 # python
 RUN apt update -qq && apt install -qq -y \
@@ -23,7 +26,29 @@ RUN apt update -qq && apt install -qq -y \
 # oscp
 RUN apt update -qq && apt install -qq -y \
     dnsrecon \
-    exploitdb
+    exploitdb \
+    nikto \
+    gobuster \
+    hydra \
+    tftp \
+    cewl \
+    telnet \
+    rpcinfo \
+    rpcclient \
+    smbclient \
+    nmblookup \
+    nbtscan \
+    smbmap \
+    smbget \
+    onesixtyone \
+    snmpwalk \
+    snmpenum \
+    snmp-check \
+    irssi \
+    ldapsearch \
+    evil-winrm \
+    crackmapexec
+
 
 # enum4linux-ng
 RUN apt update -qq && apt install -qq -y \
