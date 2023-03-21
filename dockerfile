@@ -27,8 +27,6 @@ RUN apt update -qq && apt install -qq -y \
     exploitdb \
     nikto \
     gobuster \
-    netkit-tftp \
-    cewl \
     inetutils \
     samba \
     nbtscan \
@@ -39,11 +37,11 @@ RUN apt update -qq && apt install -qq -y \
     crackmapexec \
     smtp-user-enum \
     wpscan \
-    smbmap 
+    smbmap \
+    hydra
 
 # enum4linux-ng
 RUN apt update -qq && apt install -qq -y \
-    smbclient \
     python3-ldap3 \
     python3-yaml \
     python3-impacket
