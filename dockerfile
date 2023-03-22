@@ -25,20 +25,14 @@ RUN apt update -qq && apt install -qq -y \
     crackmapexec \
     nikto \
     wfuzz \
-    netcat \
-    socat \
-    evil-winrm \
     dnsrecon \
     gobuster \
     tcpdump \
     wpscan \
     cewl \
     snmp \
-    proxychains-ng \
-    kerberoast \
-    mimikatz \
     nbtscan \
-    default-libmysqlclient-dev
+    onesixtyone
 
 # enum4linux-ng
 RUN apt update -qq && apt install -qq -y \
