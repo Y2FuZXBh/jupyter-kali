@@ -11,8 +11,7 @@ RUN apt update -qq && apt install -qq -y \
     curl \
     wget \
     hostsman \
-    ffuf \
-    netcat-traditional
+    ffuf
 
 # python
 RUN apt update -qq && apt install -qq -y \
@@ -23,12 +22,27 @@ RUN apt update -qq && apt install -qq -y \
 
 # oscp
 RUN apt update -qq && apt install -qq -y \
-    kali-tools-windows-resources \
-    kali-tools-fuzzing \
-    kali-linux-labs
+    crackmapexec \
+    nikto \
+    wfuzz \
+    netcat \
+    socat \
+    evil-winrm \
+    dnsrecon \
+    gobuster \
+    tcpdump \
+    wpscan \
+    cewl \
+    snmp \
+    proxychains-ng \
+    kerberoast \
+    mimikatz \
+    nbtscan \
+    default-libmysqlclient-dev
 
 # enum4linux-ng
 RUN apt update -qq && apt install -qq -y \
+    smbclient \
     python3-ldap3 \
     python3-yaml \
     python3-impacket
