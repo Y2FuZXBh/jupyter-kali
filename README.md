@@ -14,7 +14,7 @@ sudo apt update && sudo apt full-upgrade -y
 # docker
 sudo apt install -y docker.io
 sudo systemctl enable docker --now
-sudo usermod -aG docker $USER
+#sudo usermod -aG docker $USER
 
 # python
 sudo apt install python3
