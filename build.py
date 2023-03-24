@@ -1,3 +1,5 @@
+#!/usr/bin/sudo /usr/bin/python3
+
 import docker
 import re
 import time
