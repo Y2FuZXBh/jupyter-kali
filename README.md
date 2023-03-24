@@ -43,7 +43,7 @@ py -m pip install docker
 
 ## RUN
 ```bash
-curl https://raw.githubusercontent.com/Y2FuZXBh/jupyter-kali/main/build.py | python -
+curl https://raw.githubusercontent.com/Y2FuZXBh/jupyter-kali/main/build.py | sudo python -
 ```
 ```powershell
 (wget -usebasicparsing https://raw.githubusercontent.com/Y2FuZXBh/jupyter-kali/main/build.py).content | python -
