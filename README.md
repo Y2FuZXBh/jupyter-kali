@@ -1,6 +1,5 @@
 # Jupyter-Kali
-### Made for manual penetration testing and objectives like OSCP or HTB challenges.
-#### This is `not` a `secure` `container` use at your own risk!
+### A Kali based container for discovery and enumeration on JupyterLab hosted on Docker
 
 ## EXAMPLE
 ![example](https://user-images.githubusercontent.com/88941079/226449705-6d7f5186-e0e4-4ff9-818c-ff02ce74b45c.png)
@@ -9,19 +8,18 @@
 #### Linux (Kali)
 ```bash
 # update
-sudo apt update && sudo apt full-upgrade -y
+sudo apt update && sudo apt -y upgrade
 
 # docker
 sudo apt install -y docker.io
 sudo systemctl enable docker --now
-#sudo usermod -aG docker $USER
 
 # python
 sudo apt install python3
 sudo apt install python3-pip
 
 # pip
-pip install docker
+sudo pip install docker
 ```
 
 #### Windows `NOT TESTED` `REQ WSL2`
@@ -32,7 +30,6 @@ iex ((New-Object System.Net.WebClient).DownloadString('https://community.chocola
 
 # docker
 choco install docker-desktop
-# add $env:username to docker group..
 
 # python
 choco install python3
@@ -43,7 +40,7 @@ py -m pip install docker
 
 ## RUN
 ```bash
-curl https://raw.githubusercontent.com/Y2FuZXBh/jupyter-kali/main/build.py | sudo python -
+curl https://raw.githubusercontent.com/Y2FuZXBh/jupyter-kali/main/build.py | sudo python3 -
 ```
 ```powershell
 (wget -usebasicparsing https://raw.githubusercontent.com/Y2FuZXBh/jupyter-kali/main/build.py).content | python -
