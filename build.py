@@ -4,7 +4,9 @@ import docker
 import re
 import time
 
-PORT = 8888
+
+BIND_PORT = 8888
+BIND_IP = "127.0.0.1"
 
 print("\nJupyter-Kali | Y2FuZXBh\n")
 
@@ -31,7 +33,7 @@ print("  [+] Starting New Container..")
 _docker.containers.run(
     name="jupyter-kali",
     image="jupyter-kali:latest",
-    ports={'8888/tcp': PORT},
+    ports={'8888/tcp': (BIND_IP, BIND_PORT)},
     detach=True
 )
 time.sleep(5)
