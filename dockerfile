@@ -11,7 +11,8 @@ RUN apt update -qq && apt install -qq -y \
     curl \
     wget \
     hostsman \
-    ffuf
+    ffuf \
+    xsltproc
 
 # python
 RUN apt update -qq && apt install -qq -y \
