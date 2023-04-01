@@ -62,12 +62,12 @@ RUN apt update -qq && \
 RUN apt update -qq && \
     apt install -qq -y powershell && \
     pip install powershell_kernel && \
-    python -m powershell_kernel.install
+    python -m powershell_kernel.install --powershell-command "pwsh -l -nol"
 
 
 # tini
 ADD https://github.com/krallin/tini/releases/download/v0.19.0/tini /usr/bin/tini
-RUN chmod +x /usr/bin/tini && mkdir ~/data
+RUN chmod +x /usr/bin/tini && mkdir ~/data && touch ~/.hushlogin
 
 # run
 WORKDIR /home/jupyter
