@@ -62,7 +62,7 @@ RUN apt update -qq && \
 RUN apt update -qq && \
     apt install -qq -y powershell && \
     pip install powershell_kernel && \
-    python -m powershell_kernel.install --powershell-command "pwsh -l -nol"
+    python -m powershell_kernel.install --sys-prefix
 
 
 # tini
