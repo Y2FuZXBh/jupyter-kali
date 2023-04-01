@@ -62,7 +62,8 @@ RUN apt update -qq && \
 RUN apt update -qq && \
     apt install -qq -y powershell && \
     pip install powershell_kernel && \
-    python -m powershell_kernel.install --sys-prefix
+    python -m powershell_kernel.install --sys-prefix && \
+    chsh -s /usr/bin/pwsh
 
 
 # tini
@@ -70,7 +71,5 @@ ADD https://github.com/krallin/tini/releases/download/v0.19.0/tini /usr/bin/tini
 RUN chmod +x /usr/bin/tini && mkdir ~/data && touch ~/.hushlogin
 
 # run
-WORKDIR /home/jupyter
-ENTRYPOINT ["/usr/bin/tini", "--"]
-HEALTHCHECK CMD wget -q --spider http://127.0.0.1:8888 > /dev/null || exit 1
+WORKDIR /home/jupyterpython -m powershell_kernel.install --sys-prefixider http://127.0.0.1:8888 > /dev/null || exit 1
 CMD ["jupyter-lab", "--allow-root", "--port=8888", "--no-browser", "--ip=0.0.0.0"]
