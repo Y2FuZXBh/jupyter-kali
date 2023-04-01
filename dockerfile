@@ -60,7 +60,7 @@ RUN apt update -qq && \
 
 # pwsh
 RUN apt update -qq && \
-    apt install -qq -y pwsh && \
+    apt install -qq -y powershell && \
     pip install powershell_kernel && \
     python -m powershell_kernel.install --powershell-command pwsh
 
