@@ -72,11 +72,3 @@ RUN chmod +x /usr/bin/tini && mkdir ~/data && touch ~/.hushlogin
 # run
 WORKDIR /home/jupyterpython -m powershell_kernel.install --sys-prefixider http://127.0.0.1:8888 > /dev/null || exit 1
 CMD ["jupyter-lab", "--allow-root", "--port=8888", "--no-browser", "--ip=0.0.0.0"]
-
-
-# '-noninteractive', '-noprofile', '-File', '-'
-alias powershell='/usr/bin/pwsh'
-
-python -m powershell_kernel.install --powershell-command powershell
-
-python -m powershell_kernel.install --powershell-command /usr/bin/pwsh
