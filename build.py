@@ -22,15 +22,13 @@ _docker.images.build(
 
 # clean
 print("  [+] Cleaning Environment..")
-jupyter_kali = _docker.containers.list(filters={"name": "jupyter-kali"})
+jupyter_kali = _docker.containers.list(all=True, filters={"name": "jupyter-kali"})
 if len(jupyter_kali) == 1:
     container = _docker.containers.get(jupyter_kali[0].id)
     # stop
     container.kill()
     # remove
     container.remove(force=True)
-    # prune
-    _docker.containers.prune(filters={"id": jupyter_kali[0].id})
 
 # run
 print("  [+] Starting New Container..")
