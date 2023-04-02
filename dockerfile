@@ -19,8 +19,7 @@ RUN apt update -qq && apt install -qq -y \
     python-is-python3 \
     python3-pip && \
     pip install \
-    python3-nmap \
-    python3-ldap
+    python3-nmap
 
 # oscp
 RUN apt update -qq && apt install -qq -y \
@@ -43,6 +42,7 @@ RUN apt update -qq && apt install -qq -y \
 RUN apt update -qq && apt install -qq -y \
     smbclient \
     python3-ldap3 \
+    python3-ldap \
     python3-yaml \
     python3-impacket
 ADD https://raw.githubusercontent.com/cddmp/enum4linux-ng/master/enum4linux-ng.py enum4linux-ng.py
