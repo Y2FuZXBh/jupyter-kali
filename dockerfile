@@ -36,7 +36,8 @@ RUN apt update -qq && apt install -qq -y \
     onesixtyone \
     unicornscan \
     dnsutils \
-    exploitdb
+    exploitdb \
+    bloodhound.py
 
 # enum4linux-ng
 RUN apt update -qq && apt install -qq -y \
