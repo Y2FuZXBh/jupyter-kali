@@ -36,7 +36,7 @@ RUN apt update -qq && apt install -qq -y \
     nbtscan \
     onesixtyone \
     unicornscan \
-    dig 
+    dnsutils
 
 # enum4linux-ng
 RUN apt update -qq && apt install -qq -y \
