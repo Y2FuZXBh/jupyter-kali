@@ -17,7 +17,7 @@ _docker.images.build(
     path="https://raw.githubusercontent.com/Y2FuZXBh/jupyter-kali/main/dockerfile",
     tag="jupyter-kali:latest",
     pull=True,
-    rm=True
+    forcerm=True
 )
 
 # clean
