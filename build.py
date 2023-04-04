@@ -38,7 +38,7 @@ _docker.containers.run(
     name="jupyter-kali",
     image="jupyter-kali:latest",
     ports={'8888/tcp': (BIND_IP, BIND_PORT)},
-    command="--restart always",
+    restart_policy={"Name": "always"},
     detach=True
 )
 time.sleep(5)
