@@ -22,11 +22,13 @@ _docker.images.build(
 
 # clean
 print("  [+] Cleaning Environment..")
-jupyter_kali = _docker.containers.list(all=True, filters={"name": "jupyter-kali"})
+jupyter_kali = _docker.containers.list(
+    all=True, filters={"name": "jupyter-kali"})
 if len(jupyter_kali) == 1:
     container = _docker.containers.get(jupyter_kali[0].id)
-    # stop
-    container.kill()
+    # stop if running
+    if container.attrs['State']['Running'] == True:
+        container.kill()
     # remove
     container.remove(force=True)
 
