@@ -12,7 +12,8 @@ RUN apt update -qq && apt install -qq -y \
     wget \
     hostsman \
     ffuf \
-    xsltproc
+    xsltproc \
+    net-tools
 
 # python
 RUN apt update -qq && apt install -qq -y \
