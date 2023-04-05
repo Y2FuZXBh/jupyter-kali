@@ -60,8 +60,6 @@ RUN pip install jupyterlab
 RUN mkdir -p /usr/local/share/jupyter/lab/settings && \
     echo '{"@jupyterlab/apputils-extension:themes":{"theme": "JupyterLab Dark"}}' > /usr/local/share/jupyter/lab/settings/overrides.json
 
-ls /usr/local/share/jupyter/lab
-
 # zsh
 RUN apt update -qq && \
     apt install -qq -y zsh && \
