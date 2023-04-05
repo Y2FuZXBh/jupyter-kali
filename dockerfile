@@ -56,8 +56,11 @@ RUN dpkg -i rustscan.deb && rm rustscan.deb
 # jupyter
 EXPOSE 8888
 RUN pip install jupyterlab
-RUN mkdir -p ~/.jupyterlab/user-settings/@jupyterlab/apputils-extension/ && \
-    echo '{ "theme":"JupyterLab Dark" }' > themes.jupyterlab-settings
+# https://jupyterlab.readthedocs.io/en/stable/user/directories.html#application-directory
+RUN mkdir -p /usr/local/share/jupyter/lab/settings && \
+    echo '{"@jupyterlab/apputils-extension:themes":{"theme": "JupyterLab Dark"}}' > /usr/local/share/jupyter/lab/settings/overrides.json
+
+ls /usr/local/share/jupyter/lab
 
 # zsh
 RUN apt update -qq && \
