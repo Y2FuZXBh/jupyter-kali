@@ -27,14 +27,12 @@ OS:
 DC: 
 DNS: " > target.yml
 fi
-cat target.yml
 }
 function notes(){
 if [[ ! -f notes.txt ]]; then
     echo " 
 " > notes.txt
 fi
-cat notes.txt
 }
 function refresh-users(){
     cat users | sed 's/ *$//' | sed -r '/^\s*$/d' | sort -u > users
