@@ -32,7 +32,7 @@ cat target.yml
 function notes(){
 if [[ ! -f notes.txt ]]; then
     echo " 
-" > notes.yml
+" > notes.txt
 fi
 cat notes.txt
 }
