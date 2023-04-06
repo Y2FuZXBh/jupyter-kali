@@ -17,7 +17,7 @@ function update-hosts(){
         hostsman -l | grep "$HOST"
     fi
 }
-function build(){
+function target(){
 if [[ ! -f target.yml ]]; then
     echo "IP: 
 HOST: 
@@ -26,7 +26,12 @@ WORKGROUP:
 OS: 
 DC: 
 DNS: " > target.yml
-    echo "UPDATE: target.yml"
+fi
+}
+function notes(){
+if [[ ! -f notes.txt ]]; then
+    echo " 
+" > target.yml
 fi
 }
 function refresh-users(){
@@ -37,5 +42,6 @@ function powershell(){
     pwsh -nop -noni -nol -c "$@"
 }
 
-build
+target
+notes
 refresh
