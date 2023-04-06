@@ -60,13 +60,18 @@ RUN pip install jupyterlab
 RUN mkdir -p /usr/local/share/jupyter/lab/settings && \
     echo '{"@jupyterlab/apputils-extension:themes":{"theme": "JupyterLab Dark"}}' > /usr/local/share/jupyter/lab/settings/overrides.json
 
-# zsh
+# export notebook as pdf
+RUN apt update -qq && \
+    pip install nbconvert && \
+    apt install -qq -y pandoc texlive-xetex texlive-fonts-recommended texlive-plain-generic
+
+# zsh notebook
 RUN apt update -qq && \
     apt install -qq -y zsh && \
     pip install zsh-jupyter-kernel && \
     python -m zsh_jupyter_kernel.install --sys-prefix
 
-# pwsh
+# pwsh /f zsh
 RUN apt update -qq && \
     apt install -qq -y powershell
 
