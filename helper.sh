@@ -33,6 +33,9 @@ function refresh-users(){
     cat users | sed 's/ *$//' | sed -r '/^\s*$/d' | sort -u > users
     cat users
 }
-function powershell(){pwsh -nop -noni -nol -c "$@"}
+function powershell(){
+    pwsh -nop -noni -nol -c "$@"
+}
+
 build
 refresh
