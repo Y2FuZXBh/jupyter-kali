@@ -1,14 +1,19 @@
-# Jupyter-Kali
-### A Kali based container for recon and enumeration using JupyterLab hosted on Docker
+## Jupyter-Kali
+#### A Kali based container for recon and enumeration using JupyterLab hosted on Docker
 
-## Examples
+### Example
+---
+#### 1. Run
 ![run](https://user-images.githubusercontent.com/88941079/230677316-c7a1f87e-7640-477b-863b-8d27d3f196b8.png)
 
-![Single-File](https://user-images.githubusercontent.com/88941079/230676835-1e54eb90-0717-47cc-904b-6b5e6ef120bd.png)
+#### 2. Import/Export Files
+![single](https://user-images.githubusercontent.com/88941079/230676823-3d129680-f9d8-49c9-b43b-f4547542d9c7.png)
 
-![Split-Outputs](https://user-images.githubusercontent.com/88941079/230676823-3d129680-f9d8-49c9-b43b-f4547542d9c7.png)
+#### 3. Split Files & Output
+![split](https://user-images.githubusercontent.com/88941079/230676835-1e54eb90-0717-47cc-904b-6b5e6ef120bd.png)
 
-## Setup
+### Setup
+---
 #### Linux (Kali)
 ```bash
 # update
@@ -26,7 +31,7 @@ sudo apt install python3-pip
 sudo pip install docker
 ```
 
-#### Windows `NOT TESTED` `REQ WSL2`
+#### Windows `WSL2`
 ```powershell
 # chocolatey
 Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072
@@ -42,7 +47,8 @@ choco install python3
 py -m pip install docker
 ```
 
-## RUN
+### Run
+---
 ```bash
 curl -ss https://raw.githubusercontent.com/Y2FuZXBh/jupyter-kali/main/build.py | sudo python3 -
 ```
