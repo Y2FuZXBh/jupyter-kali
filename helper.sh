@@ -5,6 +5,7 @@ function refresh(){
     WORKGROUP=$(python -c "import yaml;print(yaml.safe_load(open('target.yml'))[\"WORKGROUP\"])")
     DC=$(python -c "import yaml;print(yaml.safe_load(open('target.yml'))[\"DC\"])")
     DNS=$(python -c "import yaml;print(yaml.safe_load(open('target.yml'))[\"DNS\"])")
+    KALI=$(python -c "import yaml;print(yaml.safe_load(open('target.yml'))[\"KALI\"])")
 }
 function update-hosts(){
     refresh
@@ -23,9 +24,9 @@ if [[ ! -f target.yml ]]; then
 HOST: 
 DOMAIN: 
 WORKGROUP: 
-OS: 
 DC: 
-DNS: " > target.yml
+DNS: 
+KALI: " > target.yml
 fi
 }
 function notes(){
