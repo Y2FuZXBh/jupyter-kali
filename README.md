@@ -1,5 +1,5 @@
 # Jupyter-Kali
-### A Kali based container for discovery and enumeration using JupyterLab hosted on Docker
+### A Kali based container for recon and enumeration using JupyterLab hosted on Docker
 
 ## EXAMPLE
 ![example](https://user-images.githubusercontent.com/88941079/226449705-6d7f5186-e0e4-4ff9-818c-ff02ce74b45c.png)
