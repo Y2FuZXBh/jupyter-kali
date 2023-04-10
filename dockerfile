@@ -41,7 +41,9 @@ RUN apt update -qq && apt install -qq -y \
     bloodhound.py \
     davtest \
     webshells \
-    metasploit-framework
+    metasploit-framework \
+    crackmapexec \
+    mimikatz
 
 # enum4linux-ng
 RUN apt update -qq && apt install -qq -y \
