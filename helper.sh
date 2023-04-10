@@ -1,9 +1,9 @@
 function update-hosts(){
-    if [ $IP != '' ] && [ $HOST != '' ] && [ $DOMAIN != '' ]; then
+    if [ $IP ] && [ $HOST ] && [ $DOMAIN ]; then
         null=$(hostsman -i $HOST.$DOMAIN:$IP)
         hostsman -l | grep "$HOST.$DOMAIN"
     fi
-    if [ $IP != '' ] && [ $HOST != '' ] && [ $DOMAIN = '' ]; then
+    if [ $IP ] && [ $HOST ] && [ -z $DOMAIN ]; then
         null=$(hostsman -i $HOST:$IP)
         hostsman -l | grep "$HOST"
     fi
