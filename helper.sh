@@ -1,33 +1,12 @@
-function refresh(){
-    IP=$(python -c "import yaml;print(yaml.safe_load(open('target.yml'))[\"IP\"])")
-    HOST=$(python -c "import yaml;print(yaml.safe_load(open('target.yml'))[\"HOST\"])")
-    DOMAIN=$(python -c "import yaml;print(yaml.safe_load(open('target.yml'))[\"DOMAIN\"])")
-    WORKGROUP=$(python -c "import yaml;print(yaml.safe_load(open('target.yml'))[\"WORKGROUP\"])")
-    DC=$(python -c "import yaml;print(yaml.safe_load(open('target.yml'))[\"DC\"])")
-    DNS=$(python -c "import yaml;print(yaml.safe_load(open('target.yml'))[\"DNS\"])")
-    KALI=$(python -c "import yaml;print(yaml.safe_load(open('target.yml'))[\"KALI\"])")
-}
 function update-hosts(){
-    refresh
-    if [ $IP != 'None' ] && [ $HOST != 'None' ] && [ $DOMAIN != 'None' ]; then
+    if [ $IP != '' ] && [ $HOST != '' ] && [ $DOMAIN != '' ]; then
         null=$(hostsman -i $HOST.$DOMAIN:$IP)
         hostsman -l | grep "$HOST.$DOMAIN"
     fi
-    if [ $IP != 'None' ] && [ $HOST != 'None' ] && [ $DOMAIN = 'None' ]; then
+    if [ $IP != '' ] && [ $HOST != '' ] && [ $DOMAIN = '' ]; then
         null=$(hostsman -i $HOST:$IP)
         hostsman -l | grep "$HOST"
     fi
-}
-function target(){
-if [[ ! -f target.yml ]]; then
-    echo "IP: 
-HOST: 
-DOMAIN: 
-WORKGROUP: 
-DC: 
-DNS: 
-KALI: " > target.yml
-fi
 }
 function notes(){
 if [[ ! -f notes.txt ]]; then
@@ -43,6 +22,6 @@ function powershell(){
     pwsh -nop -noni -nol -c "$@"
 }
 
-target
 notes
-refresh
+update-hosts
+refresh-users
