@@ -47,11 +47,17 @@ choco install python3
 py -m pip install docker
 ```
 
-### Run
+### Build + Run
 ---
 ```bash
-curl -ss https://raw.githubusercontent.com/Y2FuZXBh/jupyter-kali/main/build.py | sudo python3 -
+curl -sS https://raw.githubusercontent.com/Y2FuZXBh/jupyter-kali/main/build.py | sudo python3 -
 ```
 ```powershell
 (wget -usebasicparsing https://raw.githubusercontent.com/Y2FuZXBh/jupyter-kali/main/build.py).content | python -
+```
+
+### `After Restart` Get New Url + Token
+---
+```bash
+sudo docker logs jupyter-kali 2>&1 | grep "http://127.0.0.1" | tail -n 1 | xargs
 ```
