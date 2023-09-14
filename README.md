@@ -28,7 +28,7 @@ sudo apt install python3
 sudo apt install python3-pip
 
 # pip
-sudo pip install docker
+pip install docker
 ```
 
 #### Windows `WSL2`
