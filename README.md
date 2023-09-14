@@ -14,7 +14,7 @@
 
 ### Setup
 ---
-#### Linux (Kali)
+#### Linux (Dublin)
 ```bash
 # update
 sudo apt update && sudo apt -y upgrade
@@ -27,7 +27,7 @@ sudo systemctl enable docker --now
 sudo apt install python3
 sudo apt install python3-pip
 
-# pip
+# pip (root /f `sudo docker`)
 sudo pip install docker
 ```
 
